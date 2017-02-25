@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>编程挑战 </title>
+	<script>
+	
+		window.onload=function(){
+			var imgs=document.getElementById("img0");
+			var timer1=null;
+			index=0;
+			timer1=setTimeout(function test(){
+                index++;
+                if(index==3){
+                	index=0;
+                }
+                imgs.src="images/ad"+(index+2)+".jpg";
+               setTimeout(test,2000);
+
+			},2000);
+
+			//滚动新闻的滚动效果
+			var area=document.getElementById("scroll_div");
+			var con1=document.getElementById("scroll_begin");
+			var con2=document.getElementById("scroll_end");
+			con2.innerHTML=con1.innerHTML;
+			function scrollUp(){
+				if(area.scrollTop>=con1.offsetHeight){
+					area.scrollTop=0;
+				}else{
+					area.scrollTop++;
+				}
+			}
+			var time=50;
+			var myScroll=setInterval(scrollUp,time);
+		}	
+		
+	</script>
+	<style>
+	    *{
+	    	margin:0;
+	    	padding:0;
+	    	font-family:"微软雅黑";
+	    	background-color:#f5f5f5;
+	    	list-style-type:none;
+	    }
+		.top{
+			width:1000px;
+			margin:0 auto;
+		    height:70px;
+			background-color:white;
+		}
+		.top_left{
+			float:left;
+		}
+       
+		.top_right ul li{
+			float:left;
+			
+			text-align:center;
+			height:70px;
+
+		}
+		.top_right li a{
+			text-decoration:none;
+			height:70px;
+			color:#000;
+			width:100px;
+			display:block;
+			line-height:70px;
+			background-color:#fff;
+			
+		}
+		.top_right li a:hover{
+			background-color:#BD3847;
+		}
+		.main{
+			width:1000px;
+			margin:0 auto;
+			background-color:#fff;
+			min-height:500px;
+			_height:310px;
+
+		}
+		.ad{
+			width:1000px;
+	        height:310px;
+        }	
+	
+        .ad img{
+	        height:310px;
+	        width:1000px;
+	        display:block;
+        }
+        .scroll_news {
+	        width:1000px;
+	        height:40px;
+	        margin:20px 0;	
+	        font-size:16px;
+        }
+        .scroll_news span{
+            width:170px;
+            height:40px;
+            line-height:40px;
+            display:block;
+            float:left;
+            color:white;
+            background-color:#BD3847;
+            text-align:center;
+
+        }
+		.scroll_news #scroll_div{
+			width:830px;
+			height:40px;
+			background-color:#3E3E3E;
+			float:right;
+			overflow:hidden;
+			
+			
+		}
+
+		#scroll_div li a{
+			text-decoration:none;
+			color:#fff;
+			background-color:#3E3E3E;
+			display:block;
+			padding-left:20px;
+			height:40px;
+			width:auto;
+			line-height:40px;
+		}
+</style>
+</head>
+<body>
+	<div class="top">
+		<div class="top_left">
+			<img src="http://img.mukewang.com/53edadad0001efe202000070.jpg" alt="慕课网">
+		</div>
+		<div class="top_right">
+			<ul>
+				<li><a href="#" style="background-color:#BD3847">首页</a></li>
+				<li><a href="#">产品特色</a></li>
+				<li><a href="#">解决方案</a></li>
+				<li><a href="#">产品价格</a></li>
+				<li><a href="#">帮助中心</a></li>
+				<li><a href="#">关于我们</a></li>
+			</ul>
+		</div>
+	</div><!--top结束-->
+	<div class="main">
+		<div class="ad" id="picBox">
+				<img src="images/ad2.jpg" alt="" id="img0">
+		</div><!--ad结束-->
+		<div class="scroll_news">
+			<span>滚动新闻</span>
+			<div id="scroll_div">
+				<div id="scroll_begin">
+				<ul id="ul">
+					<li><a href="list.html" >宅地70年使用权到期？中央有了新说法</a></li>
+					<li><a href="list.html" >148万考生参加国考，竞争2.7万个公务员岗位</a></li>
+					<li><a href="list.html" >外媒爆料称特朗普希望子女有权审阅最高机密</a></li>
+					<li><a href="list.html" >卡斯特罗妹妹不去古巴参加葬礼，曾为中情局效力</a></li>
+					<li><a href="list.html" >马思纯妈妈是谁？蒋雯丽亲姐兼经纪人</a></li>
+				</ul>
+			</div>
+			<div id="scroll_end"></div>
+			</div>
+			
+		</div><!--scroll_news结束-->
+	</div><!--main结束-->
+	<div class="bottom"></div><!--bottom结束-->
+</body>
+</html>
