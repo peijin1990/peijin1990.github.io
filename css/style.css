@@ -1,6 +1,6 @@
 /*通用设置*/
 body{
-	background-image:url(../images/bg.jpg);
+	background-image:url(../images/2.jpg);
 	overflow:hidden;
 }
 .common{
@@ -10,12 +10,17 @@ body{
 div.hr_10{
 	margin-top:10px;
 }
+div.main{
+	width:100vw;
+	height:100vh;
+	 background-color:rgba(0,0,0,.5);
+	 overflow:hidden;
+}
 /*header*/
 header{
 	width:100%;
 	height:120px;
-	background-color:rgba(148,0,211,1);
-	
+   
 }
 div.container h3{
 	height:120px;
@@ -42,20 +47,26 @@ div.container nav a{
 	font-weight:600;
 }
 div.container nav a:hover{
-	background-color:rgba(0,0,0,0.5);
+	background-color:rgba(0,0,0,0.2);
+	color:rgba(0,206,209,.8);
 }
 
 /*section*/
 
 section aside{
-	width:390px;
-	height:100px;
+	width:350px;
+	height:400px;
     float:left;
-	background-color:#abcdef;
+	border:10px solid;
+	background-color:#fff;
+	border-image:-webkit-linear-gradient(#0381F0 0%,#77E5FC 50%) 10; 
+	box-shadow:2px 3px 1px rgab(0,0,0,1);
 }
 section article{
 	width:800px;
-	height:100px;
+	height:600px;
     float:right;
-    background-color:#abcdef;
+    border:10px solid;
+    border-image:-webkit-linear-gradient(#0381F0 0%,#77E5FC 50%) 10;
+    background-color:#fff;
 }
