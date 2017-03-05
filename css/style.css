@@ -1,0 +1,61 @@
+/*通用设置*/
+body{
+	background-image:url(../images/bg.jpg);
+	overflow:hidden;
+}
+.common{
+	width:1200px;
+	margin:0 auto;
+}
+div.hr_10{
+	margin-top:10px;
+}
+/*header*/
+header{
+	width:100%;
+	height:120px;
+	background-color:rgba(148,0,211,1);
+	
+}
+div.container h3{
+	height:120px;
+	float:left;
+	font-family:"微软雅黑";
+	font-size:40px;
+	line-height:120px;
+	font-weight:400;
+	color:#fff;
+}
+
+div.container nav{
+	float:right;
+	height:120px;
+	line-height:120px;
+}
+div.container nav a{
+	display:block;
+	float:left;
+	color:#fff;
+	width:auto;
+	padding:0 10px;
+	font-size:24px;
+	font-weight:600;
+}
+div.container nav a:hover{
+	background-color:rgba(0,0,0,0.5);
+}
+
+/*section*/
+
+section aside{
+	width:390px;
+	height:100px;
+    float:left;
+	background-color:#abcdef;
+}
+section article{
+	width:800px;
+	height:100px;
+    float:right;
+    background-color:#abcdef;
+}
