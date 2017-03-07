@@ -1,7 +1,6 @@
 /*通用设置*/
 body{
 	background-image:url(../images/2.jpg);
-	overflow:hidden;
 }
 .common{
 	width:1200px;
@@ -57,9 +56,12 @@ section.common{
 	position:relative;
 	overflow:hidden;
 }
-section div.container{
+section div.contain{
 	width:1200px;
+	height:620px;
 	margin:0 auto;
+	overflow:hidden;
+	position:relative;
 }
 section img#section_2{
 	position:absolute;
@@ -75,6 +77,24 @@ section img#section_1{
 	bottom:0;
 	margin:auto;
 }
+ section div.mainSection{
+	width:1200px;
+} 
+section div.section1{
+	position:absolute;
+	top:0;
+	left:0;
+}
+section div.section2{
+	position:absolute;
+	top:0;
+	left:-1200px;
+}
+section div.section3{
+	position:absolute;
+	top:0;
+	left:-1200px;
+}
 section aside{
 	width:350px;
 	height:400px;
@@ -82,7 +102,6 @@ section aside{
 	border:10px solid;
 	background-color:#fff;
 	border-image:-webkit-linear-gradient(#0381F0 0%,#77E5FC 50%) 10; 
-	box-shadow:2px 3px 1px rgab(0,0,0,1);
 }
 section article{
 	width:800px;
