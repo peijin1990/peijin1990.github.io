@@ -52,7 +52,29 @@ div.container nav a:hover{
 }
 
 /*section*/
-
+section.common{
+	width:1600px;
+	position:relative;
+	overflow:hidden;
+}
+section div.container{
+	width:1200px;
+	margin:0 auto;
+}
+section img#section_2{
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+}
+section img#section_1{
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+}
 section aside{
 	width:350px;
 	height:400px;
