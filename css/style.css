@@ -95,6 +95,8 @@ section div.section3{
 	top:0;
 	left:-1200px;
 }
+
+/*section aside*/
 section aside{
 	width:350px;
 	height:400px;
@@ -103,6 +105,15 @@ section aside{
 	background-color:#fff;
 	border-image:-webkit-linear-gradient(#0381F0 0%,#77E5FC 50%) 10; 
 }
+section aside ol {
+	padding:0 5px;
+	counter-reset:ordered;
+}
+section aside ol li:before{
+	counter-increment:ordered;
+	content:counter(ordered) ".";
+}
+/*section article*/
 section article{
 	width:800px;
 	height:600px;
