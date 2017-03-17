@@ -1,124 +1,91 @@
 /*通用设置*/
 body{
-	background-image:url(../images/2.jpg);
+	background-image:url(../images/bg.jpg);
 }
 .common{
 	width:1200px;
 	margin:0 auto;
 }
+ul{
+	list-style:none;
+}
 div.hr_10{
 	margin-top:10px;
 }
-div.main{
-	width:100vw;
-	height:100vh;
-	 background-color:rgba(0,0,0,.5);
-	 overflow:hidden;
-}
+
 /*header*/
 header{
 	width:100%;
-	height:120px;
-   
+	height:100px;
+	background-color:rgb(32,178,170);   
 }
 div.container h3{
-	height:120px;
+	height:100px;
 	float:left;
 	font-family:"微软雅黑";
 	font-size:40px;
-	line-height:120px;
+	line-height:100px;
 	font-weight:400;
 	color:#fff;
 }
 
 div.container nav{
 	float:right;
-	height:120px;
-	line-height:120px;
+	height:100px;
+	line-height:100px;
 }
 div.container nav a{
 	display:block;
 	float:left;
 	color:#fff;
 	width:auto;
-	padding:0 10px;
+	padding:0 35px;
 	font-size:24px;
 	font-weight:600;
 }
 div.container nav a:hover{
-	background-color:rgba(0,0,0,0.2);
-	color:rgba(0,206,209,.8);
+	/*background-color:rgba(0,0,0,0.2);*/
+	color:rgba(47,79,79,.8);
+	border-radius:50%;
+	box-shadow:0 0 0 2px rgba(32,178,170,0.3) inset;
+	background-color:#fff;
 }
 
 /*section*/
-section.common{
-	width:1600px;
-	position:relative;
-	overflow:hidden;
+/*aside*/
+section aside{
+	font-family:"微软雅黑";
+	font-size:24px;
+	width:300px;
+	height:auto;
+	float:left;
+	color:rgba(0,0,0,0.8);	
+
 }
-section div.contain{
-	width:1200px;
-	height:620px;
-	margin:0 auto;
-	overflow:hidden;
-	position:relative;
+section aside .list_nav,
+section aside .list
+{
+	padding:0 20px;
+	height:auto;
+	line-height:50px;
+	background-color:rgba(0,128,128,0.4);
+	border-radius:8px;
+	box-shadow:2px 2px 2px rgba(255,255,255,0.8);
+	margin-bottom:40px;
 }
-section img#section_2{
-	position:absolute;
-	left:0;
-	top:0;
-	bottom:0;
-	margin:auto;
-}
-section img#section_1{
-	position:absolute;
-	right:0;
-	top:0;
-	bottom:0;
-	margin:auto;
-}
- section div.mainSection{
-	width:1200px;
-} 
-section div.section1{
-	position:absolute;
-	top:0;
-	left:0;
-}
-section div.section2{
-	position:absolute;
-	top:0;
-	left:-1200px;
-}
-section div.section3{
-	position:absolute;
-	top:0;
-	left:-1200px;
+section aside .list ul li{
+	
+	border-bottom:1px dotted #999;
+
 }
 
-/*section aside*/
-section aside{
-	width:350px;
-	height:400px;
-    float:left;
-	border:10px solid;
-	background-color:#fff;
-	border-image:-webkit-linear-gradient(#0381F0 0%,#77E5FC 50%) 10; 
-}
-section aside ol {
-	padding:0 5px;
-	counter-reset:ordered;
-}
-section aside ol li:before{
-	counter-increment:ordered;
-	content:counter(ordered) ".";
-}
-/*section article*/
+/*article*/
 section article{
-	width:800px;
-	height:600px;
-    float:right;
-    border:10px solid;
-    border-image:-webkit-linear-gradient(#0381F0 0%,#77E5FC 50%) 10;
-    background-color:#fff;
+	width:880px;
+	height:1300px;
+	float:right;
+	color:rgba(0,0,0,0.8);
+	background-color:rgba(46,139,87,0.2);
+	border-radius:10px;
+	box-shadow:2px 2px 2px rgba(255,255,255,0.8);
 }
