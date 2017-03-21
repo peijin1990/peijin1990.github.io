@@ -1,6 +1,6 @@
 /*通用设置*/
 body{
-	background-image:url(../images/bg.jpg);
+
 }
 .common{
 	width:1200px;
@@ -12,12 +12,15 @@ ul{
 div.hr_10{
 	margin-top:10px;
 }
-
+.clr{
+	height:0;
+	clear:both;
+}
 /*header*/
 header{
 	width:100%;
 	height:100px;
-	background-color:rgb(32,178,170);   
+	background-color:rgba(252,157,154,1);   
 }
 div.container h3{
 	height:100px;
@@ -47,8 +50,28 @@ div.container nav a:hover{
 	/*background-color:rgba(0,0,0,0.2);*/
 	color:rgba(47,79,79,.8);
 	border-radius:50%;
-	box-shadow:0 0 0 2px rgba(32,178,170,0.3) inset;
+	box-shadow:0 0 0 2px rgba(255,255,255,0.3) inset;
 	background-color:#fff;
+	-webkit-animation:mymove 1s;
+	   -moz-animation:mymove 1s;
+	     -o-animation:mymove 1s;
+	        animation:mymove 1s;
+}
+@-webkit-keyframes mymove{
+	from{border-radius:0%;}
+	to{border-radius:50%;}
+}
+@-moz-keyframes mymove{
+	from{border-radius:0%;}
+	to{border-radius:50%;}
+}
+@-o-keyframes mymove{
+	from{border-radius:0%;}
+	to{border-radius:50%;}
+}
+@keyframes mymove{
+	from{border-radius:0%;}
+	to{border-radius:50%;}
 }
 
 /*section*/
@@ -65,27 +88,65 @@ section aside{
 section aside .list_nav,
 section aside .list
 {
-	padding:0 20px;
+	text-indent:20px;
 	height:auto;
+	color:#333;
 	line-height:50px;
-	background-color:rgba(0,128,128,0.4);
+	background-color:rgba(249,205,173,0.3);
 	border-radius:8px;
-	box-shadow:2px 2px 2px rgba(255,255,255,0.8);
+	box-shadow:4px 6px 4px rgba(0,0,0,0.4);
 	margin-bottom:40px;
 }
-section aside .list ul li{
-	
-	border-bottom:1px dotted #999;
-
+section aside .list ul li,
+section aside .list_nav dd
+{	
+	border-bottom:1px dotted #fff;
 }
+section aside .list h3,
+section aside .list_nav h3
+{
+	font-weight:400;
+	color:#fff;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+	background-color:rgba(252,157,154,1);
+}
+section aside dt:hover,
+section aside dd:hover,
+section aside li:hover{
+	background-color:rgba(0,0,0,0.2);	
+}
+section aside dl:last-child dd,
+section aside ul li:last-child{
+	border:none;
+}
+section aside dl:last-child dd:hover,
+section aside li:last-child:hover{
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+}
+
 
 /*article*/
 section article{
 	width:880px;
-	height:1300px;
+	height:auto;
 	float:right;
 	color:rgba(0,0,0,0.8);
-	background-color:rgba(46,139,87,0.2);
-	border-radius:10px;
-	box-shadow:2px 2px 2px rgba(255,255,255,0.8);
+}
+section article .article{
+	width:100%;
+	height:200px;
+	border-radius:8px;
+	border:1px solid rgba(0,0,0,0.2);
+	margin-bottom:30px;
+	box-shadow:5px 5px 5px rgba(0,0,0,0.2);
+}
+	
+
+/*footer*/
+footer{
+	width:100%;
+	height:100px;
+	background-color:rgba(0,0,0,0.5);   
 }
