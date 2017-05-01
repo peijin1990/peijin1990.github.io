@@ -56,50 +56,53 @@
             </div>
                 
             </aside>
-            <article>
-                <div class="article">
-                    <div>
-                        <h1>wampserver2.5-apache2.4.9允许外部访问的配置</h1>
-                        <p>打开..\wamp\bin\apache\apache2.4.9\conf\httpd.conf配置文件</p>
-                        <a href="article1.html">readMore</a>
-                    </div>
-                </div>
-               <div class="article">
-                    <div>
-                        <h1>文章标题</h1>
-                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-                        <a href="">readMore</a>
-                    </div>
-                </div>
-               <div class="article">
-                    <div>
-                        <h1>文章标题</h1>
-                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-                        <a href="">readMore</a>
-                    </div>
-                </div>
-               <div class="article">
-                    <div>
-                        <h1>文章标题</h1>
-                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-                        <a href="">readMore</a>
-                    </div>
-                </div>
-               <div class="article">
-                    <div>
-                        <h1>文章标题</h1>
-                        <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-                        <a href="">readMore</a>
-                    </div>
-                </div>
+            <article >
+               <div class="blog_article">
+               	<h1>wampserver2.5-apache2.4.9允许外部访问的配置</h1>
+               	<p>打开..\wamp\bin\apache\apache2.4.9\conf\httpd.conf配置文件</p>
+               	<pre>
+               		<Directory "c:/wamp/www/">
+    #
+    # Possible values for the Options directive are "None", "All",
+    # or any combination of:
+    #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+    #
+    # Note that "MultiViews" must be named *explicitly* --- "Options All"
+    # doesn‘t give it to you.
+    #
+    # The Options directive is both complicated and important.  Please see
+    # http://httpd.apache.org/docs/2.4/mod/core.html#options
+    # for more information.
+    #
+    Options Indexes FollowSymLinks
+    #
+    # AllowOverride controls what directives may be placed in .htaccess files.
+    # It can be "All", "None", or any combination of the keywords:
+    #   AllowOverride FileInfo AuthConfig Limit
+    #
+    AllowOverride all
+    Require all granted   #添加允许外部访问
+ 
+    #
+    # Controls who can get stuff from this server.
+    #
+ 
+    #   onlineoffline tag - don‘t remove
+    # Require local  #注释请求本机访问
+</Directory>
+
+    </pre>
+    <p>将上面代码中有中文注释的地方，照着修改。</p>
+	<p>重启服务，再访问下就可以了。</p>
+               </div>
             </article>
         </section>
 
         <div class="clr"></div>
         <div class="hr_10"></div>
         <footer>
-           <div>
-            <nav><a href="http://www.imooc.com">慕课网</a></nav>
+        <div>
+        	<nav><a href="http://www.imooc.com">慕课网</a></nav>
             <nav><a href="http://www.w3school.com.cn">w3c</a></nav>
             <nav><a href="http://www.epubit.com.cn/">异步社区</a></nav>
             <nav><a href="http://www.ituring.com.cn/">图灵社区</a></nav>
@@ -107,6 +110,7 @@
             <nav><a href="http://www.ruanyifeng.com/blog/">阮一峰</a></nav>
             <nav><a href="https://regexper.com/">Regexper</a></nav>
         </div>
+         
         </footer>
     </div>
 </body>
