@@ -253,8 +253,8 @@ section article .work .image{
 }
 section article .work .image img{
 	border-radius:10px;
-	border:1px solid #3cf;
-	box-shadow:1px 1px 5px #3cf;
+	border:1px solid #999;
+	box-shadow:1px 1px 5px #999;
 }
 section article .work .image .move{
 	width:200px;
