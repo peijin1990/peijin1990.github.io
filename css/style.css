@@ -144,7 +144,7 @@ section aside li:last-child:hover{
 }
 
 
-/*article*/
+/* 文章article*/
 section article{
 	width:880px;
 	height:auto;
@@ -241,6 +241,65 @@ footer nav a{
 footer nav a:hover{
 	color:#fff;
 }
+
+/*作品article*/
+section article .work .image{
+	float:left;
+	padding:10px;
+	width:200px;
+	height:200px;
+	position:relative;
+	
+}
+section article .work .image img{
+	border-radius:10px;
+	border:1px solid #3cf;
+}
+section article .work .image .move{
+	width:200px;
+	height:40px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	background-color:#fff;
+	position:absolute;
+	bottom:9px;
+	left:11px;
+	color:#000;
+	text-align:center;
+	overflow:hidden;
+	
+}
+section article .work .image .move:hover{
+	height:80px;
+	color:#fff;
+	background-color:rgba(255,255,255,0.3);
+	-webkit-animation:moving 0.5s;
+	   -moz-animation:moving 0.5s;
+	     -o-animation:moving 0.5s;
+	        animation:moving 0.5s;	 
+}
+@-webkit-keyframes moving{
+	from {height:40px;}
+	to {height:80px;}
+}
+@-moz-keyframes moving{
+	from {height:40px;}
+	to {height:80px;}
+}
+@-o-keyframes moving{
+	from {height:40px;}
+	to {height:80px;}
+}
+@keyframes moving{
+	from {height:40px;}
+	to {height:80px;}
+}
+section article .work .image .move h3{
+	font-weight:lighter;
+	height:40px;
+	line-height:40px;
+}
+
 /*blog_article*/
 pre{
 	margin:20px 0;
