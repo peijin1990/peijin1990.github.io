@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>博客小栈</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <div class="container common">
+                <h3>博客小栈</h3>
+                <nav>
+                    <a href="../index.html">首页</a>
+                    <a href="#">文章</a>
+                    <a href="#">作品</a>
+                    <a href="#">随笔</a>
+                    <a href="https://github.com/peijin1990/peijin1990.github.io">github.com/peijin1990</a>
+                </nav>
+            </div>
+        </header>
+        <div class="hr_10"></div>
+        <section class="common">
+            <aside>
+            <div class="list_nav">
+                <h3>最新随笔</h3>
+                <dl>
+                    <dt>最新文章</dt>
+                    <dd><a href="article1.html">apache外部访问设置</a></dd>
+                </dl>
+                <dl>
+                    <dt>最新作品</dt>
+                    <dd>某欧姆</dd>
+                </dl>
+                <dl>
+                    <dt>最新随笔</dt>
+                    <dd>某欧姆</dd>
+                </dl>
+            </div>
+            <div class="list">
+                <h3>随笔分类</h3>
+                <ul>
+                    <li><a href="">css<span>(0)</span></a></li>
+                    <li><a href="">html<span>(0)</span></a></li>
+                    <li><a href="">javascript<span>(0)</span></a></li>
+                    <li><a href="">css3<span>(0)</span></a></li>
+                    <li><a href="">html5<span>(0)</span></a></li>
+                    <li><a href="">jquery<span>(0)</span></a></li>
+                    <li><a href="">php<span>(0)</span></a></li>
+                    <li><a href="">ajax<span>(0)</span></a></li>
+                </ul>
+            </div>
+                
+            </aside>
+            <article >
+               <div class="blog_article">
+               	<h1>关于class类名的js函数的思考</h1>
+               	<p>在慕课网学习时，老师教了一个用js获取class类名的方法，后来自己买书看到了《JavaScript DOM编程艺术》，在这本书里，同样讲解了一种用js获取class名称的方法，下面总结分享一下。</p>
+               	<pre>
+               		function getByClass(parent,clsName){ 
+                        //用来存取所有获取到的class为box的元素 
+                        var boxArr=new Array(); oElements=parent.getElementsByTagName("*"); 
+                        for(var i=0;i&lt;oElements.length;i++){ 
+                        if(oElements[i].className==clsName){ 
+                            boxArr.push(oElements[i]); 
+                          } 
+                        } 
+                         return boxArr; 
+                    }
+
+                </pre>
+                <p>改进注意：</p>
+                <p>
+                  1.这种方法只适用于class类名只有一个的情况，当一个标签含有多个类名时，这种情况会忽略含多个类名的标签。  
+                </p>
+                <p> 改为：</p>
+	            <pre>
+                  if(oElements[i].className.indexOf(claName)!=-1){
+                    //前面使用了push方法，添加元素到数组中，这里使用直接赋值的方法
+                      boxArr[boxArr.length]=oElements[i];
+                 }   
+                </pre>
+                <p>2.不过这里的函数还不是很完美，因为它忽略了浏览器支持getclassname的情况，理论上，支持的时候，我们其实也可以用不支持的方法获得类名。不过这里我们还是要完善一下，有一个完整的罗辑！</p>
+                <pre>
+                    function getByClass(node,classname){
+                        if(node.getElementsByClassName){
+                            return node.getElementsByClassName(classname);
+                        }
+                        else{
+                            var boxArr=[];
+                            var elements=node.getElementsByTagName("*");
+                            var l=elements.length;
+                            for(var i=0;i&lt;l;i++){
+                                if(elements[i].className.indexOf(classname)!=-1){
+                                    boxArr.push(elements[i]);
+                                }
+                            }
+                            return boxArr;
+                        }
+                    }
+                </pre>
+                </div>
+            </article>
+        </section>
+
+        <div class="clr"></div>
+        <div class="hr_10"></div>
+        <footer>
+        <div>
+        	<nav><a href="http://www.imooc.com">慕课网</a></nav>
+            <nav><a href="http://www.w3school.com.cn">w3c</a></nav>
+            <nav><a href="http://www.epubit.com.cn/">异步社区</a></nav>
+            <nav><a href="http://www.ituring.com.cn/">图灵社区</a></nav>
+            <nav><a href="http://www.zhangxinxu.com/wordpress/">张鑫旭</a></nav>
+            <nav><a href="http://www.ruanyifeng.com/blog/">阮一峰</a></nav>
+            <nav><a href="https://regexper.com/">Regexper</a></nav>
+        </div>
+         
+        </footer>
+    </div>
+</body>
+
+</html>

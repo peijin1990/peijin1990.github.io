@@ -150,6 +150,16 @@ section article{
 	height:auto;
 	float:right;
 }
+section article .article_head_work{
+	font-size:40px;
+	font-weight:lighter;
+	width:100%;
+	border-bottom:2px solid rgba(49,199,84,0.5);
+	color:rgb(49,199,84);
+	padding:5px 0;
+	margin-bottom:20px;
+	text-shadow: 1px 1px 1px rgba(49,199,84,0.8);
+}
 section article .article{
 	width:100%;
 	height:200px;
@@ -184,10 +194,22 @@ section article .article div a{
 	height:30px;
 	line-height:30px;
 	font-size:24px;
-	border:1px solid #2DA84B;
-	border-radius:15px;
-	background-color:#31C754;
+	/*border:1px solid transparent;*/
+	border-radius:16px;
+	background-color:rgb(49,199,84);
 	color:#fff;
+	
+}
+section article .article div a:hover{
+	box-shadow:
+				inset 0 5px #c1ffc1,
+				inset 0 -5px #9bcd9b,
+				inset 5px 0 #b4eeb4,
+				inset -5px 0 #b4eeb4;
+}
+p{
+	text-indent:2em;
+	text-align:justify;
 }
 
 /*footer*/
@@ -221,7 +243,8 @@ footer nav a:hover{
 }
 /*blog_article*/
 pre{
-
+	margin:20px 0;
+	padding-top:20px;
 	font-family:"microsoft yahei";
 	border:1px solid #6A737D;
 	border-radius:8px;

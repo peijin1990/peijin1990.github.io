@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>博客小栈</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <div class="container common">
+                <h3>博客小栈</h3>
+                <nav>
+                    <a href="../index.html">首页</a>
+                    <a href="#">文章</a>
+                    <a href="#">作品</a>
+                    <a href="#">随笔</a>
+                    <a href="https://github.com/peijin1990/peijin1990.github.io">github.com/peijin1990</a>
+                </nav>
+            </div>
+        </header>
+        <div class="hr_10"></div>
+        <section class="common">
+            <aside>
+            <div class="list_nav">
+                <h3>最新随笔</h3>
+                <dl>
+                    <dt>最新文章</dt>
+                    <dd><a href="article1.html">apache外部访问设置</a></dd>
+                </dl>
+                <dl>
+                    <dt>最新作品</dt>
+                    <dd>某欧姆</dd>
+                </dl>
+                <dl>
+                    <dt>最新随笔</dt>
+                    <dd>某欧姆</dd>
+                </dl>
+            </div>
+            <div class="list">
+                <h3>随笔分类</h3>
+                <ul>
+                    <li><a href="">css<span>(0)</span></a></li>
+                    <li><a href="">html<span>(0)</span></a></li>
+                    <li><a href="">javascript<span>(0)</span></a></li>
+                    <li><a href="">css3<span>(0)</span></a></li>
+                    <li><a href="">html5<span>(0)</span></a></li>
+                    <li><a href="">jquery<span>(0)</span></a></li>
+                    <li><a href="">php<span>(0)</span></a></li>
+                    <li><a href="">ajax<span>(0)</span></a></li>
+                </ul>
+            </div>
+                
+            </aside>
+            <article >
+               <div class="blog_article">
+               	<h1>相对路径的写法</h1>
+               	<p>在编辑网页的过程中，常常需要超链接到某个地址，或是加载某个文件，这个时候我们需要路径来完成这些操作。</p>
+                <p>这章内容对已经非常熟悉前端操作的人来说，可以略过。但是对于刚接触前端的新人，我觉得还是有科普的必要的。本章内容是我在网络上看的其他人的文章，加上自己的总结。好了，不多说了，让我们开始吧！</p>
+                <p>相信大多数人的第一个html网页是用Dreamweaver写的，在Dreamweaver中，我们遇到插入路径，都是自动添加的，不需要自己手写。但是，这种非常非常便捷的方式，在遇到sublime（我现在就是用的sublime，因为非常小巧，便捷，打开迅速，反应迅速，这不是在打广告。。。。。。）等软件的时候，就不行了，我们必须自己判断路径地址，然后手写输入。</p>
+                <p>首先明确几个概念：</p>
+                <p>1.&nbsp;/表示根目录</p>
+                <p>2.&nbsp;../表示源文件所在目录的上一级目录</p>
+                <p>3.&nbsp;../../表示源文件所在目录的上上级目录，以此类推。</p>
+                <p>下面我们来举几个例子</p>
+                
+                <div class="hr_10"></div>
+                <p>1.在info.html加入超链接，链接的文件在info.html的<span style="color:red;">上级</span>目录中</p>
+               	<pre>
+               	    假设info.html的路径是：c:\Inetpub\wwwroot\sites\blabla\info.html
+                    假设index.html的路径是：c:\Inetpub\wwwroot\sites\index.html
+                    在info.html中加入index.html的超链接的代码应该这样写：
+                    &lt;a href="../index.html"&gt;index.html&lt;/a&gt;
+                </pre>
+                <div class="hr_10"></div>
+                <p>2.在info.html加入超链接，链接的文件在info.html的<span style="color:red;">上上级</span>目录中</p>
+                <pre>
+                    假设info.html的路径是：c:\Inetpub\wwwroot\sites\blabla\info.html
+                    假设index.html的路径是：c:\Inetpub\wwwroot\index.html
+                    在info.html中加入index.html的超链接的代码应该这样写：
+                    &lt;a href="../../index.html"&gt;index.html&lt;/a&gt;
+                </pre>
+                <div class="hr_10"></div>
+                <p>3.在info.html加入超链接，链接的文件在info.html的<span style="color:red;">上级目录blabla的兄弟目录wowstoryd的子目录</span>中</p>
+                <pre>
+                    假设info.html的路径是：c:\Inetpub\wwwroot\sites\blabla\info.html
+                    假设index.html的路径是：c:\Inetpub\wwwroot\sites\wowstory\index.html
+                    在info.html中加入index.html的超链接的代码应该这样写：
+                    &lt;a href="../index.html"&gt;index.html&lt;/a&gt;
+                </pre>
+                <div class="hr_10"></div>
+                <p>4.如何表示下级目录引用下级目录的文件？<span style="color:red;">直接写下级目录文件的路径即可。</span></p>
+                <pre>
+                    假设info.html的路径是：c:\Inetpub\wwwroot\sites\blabla\info.html
+                    假设index.html的路径是：c:\Inetpub\wwwroot\sites\blabla\html\index.html
+                    在info.html中加入index.html的超链接的代码应该这样写：
+                    &lt;a href="html/index.html"&gt;index.html&lt;/a&gt;
+                </pre>
+                 <pre>
+                    假设info.html的路径是：c:\Inetpub\wwwroot\sites\blabla\info.html
+                    假设index.html的路径是：c:\Inetpub\wwwroot\sites\blabla\html\web\index.html
+                    在info.html中加入index.html的超链接的代码应该这样写：
+                    &lt;a href="html/web/index.html"&gt;index.html&lt;/a&gt;
+                </pre>
+                </div>
+            </article>
+        </section>
+
+        <div class="clr"></div>
+        <div class="hr_10"></div>
+        <footer>
+        <div>
+        	<nav><a href="http://www.imooc.com">慕课网</a></nav>
+            <nav><a href="http://www.w3school.com.cn">w3c</a></nav>
+            <nav><a href="http://www.epubit.com.cn/">异步社区</a></nav>
+            <nav><a href="http://www.ituring.com.cn/">图灵社区</a></nav>
+            <nav><a href="http://www.zhangxinxu.com/wordpress/">张鑫旭</a></nav>
+            <nav><a href="http://www.ruanyifeng.com/blog/">阮一峰</a></nav>
+            <nav><a href="https://regexper.com/">Regexper</a></nav>
+        </div>
+         
+        </footer>
+    </div>
+</body>
+
+</html>
