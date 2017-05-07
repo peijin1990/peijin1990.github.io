@@ -251,6 +251,9 @@ section article .work .image{
 	position:relative;
 	
 }
+section articel .work .image a{
+	display: block;
+}
 section article .work .image img{
 	border-radius:10px;
 	border:1px solid #999;
