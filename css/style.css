@@ -145,6 +145,9 @@ section aside li:last-child:hover{
 
 
 /* 文章article*/
+section{
+	height:800px;
+}
 section article{
 	width:880px;
 	height:auto;
@@ -160,7 +163,9 @@ section article .article_head_work{
 	margin-bottom:20px;
 	text-shadow: 1px 1px 1px rgba(49,199,84,0.8);
 }
-section article .article{
+
+section article .work
+{
 	width:100%;
 	height:200px;
 	border-radius:8px;
@@ -170,52 +175,31 @@ section article .article{
 	background-color:#F7F9FB;
 	color:#6A737D;
 }
-section article .article div{
-	width:90%;
-	height:100%;
-	margin:10px auto;
-	position:relative;
+section article .work{
+	height:auto;
 }
-section article .article div h1{
+section article .work h3{
+	margin-left:30px;
+}
+section article .work li{
+	margin-left:50px;
+	padding-left:10px;
+}
+section article .work li a{
+	color:#333;
 	font-size:24px;
-	text-align:center;
-	font-weight:lighter;
-	padding-bottom:10px;
-	margin-bottom:10px;
-	border-bottom:1px dotted #C8E1FF;
-	color:#586069;
-}
-section article .article div a{
-	position:absolute;
-	bottom:40px;
-	right:0;
-	width:auto;
-	padding:5px 10px;
+	display:block;
 	height:30px;
 	line-height:30px;
-	font-size:24px;
-	/*border:1px solid transparent;*/
-	border-radius:16px;
-	background-color:rgb(49,199,84);
-	color:#fff;
-	
+	margin:10px 5px;
+	border-bottom:1px dotted;
 }
-section article .article div a:hover{
-	box-shadow:
-				inset 0 5px #c1ffc1,
-				inset 0 -5px #9bcd9b,
-				inset 5px 0 #b4eeb4,
-				inset -5px 0 #b4eeb4;
-}
-p{
-	text-indent:2em;
-	text-align:justify;
-}
+
 
 /*footer*/
 footer{
 	width:100%;
-	height:100px;
+	height:auto;
 	background-color:#24292E;  
 	color:#fff; 
 }
@@ -242,69 +226,7 @@ footer nav a:hover{
 	color:#fff;
 }
 
-/*作品article*/
-section article .work .image{
-	float:left;
-	padding:10px;
-	width:200px;
-	height:200px;
-	position:relative;
-	
-}
-section articel .work .image a{
-	display: block;
-}
-section article .work .image img{
-	border-radius:10px;
-	border:1px solid #999;
-	box-shadow:1px 1px 5px #999;
-}
-section article .work .image .move{
-	width:200px;
-	height:40px;
-	border-bottom-left-radius:10px;
-	border-bottom-right-radius:10px;
-	background-color:#fff;
-	position:absolute;
-	bottom:9px;
-	left:11px;
-	color:#000;
-	text-align:center;
-	overflow:hidden;
-	
-}
-section article .work .image .move:hover{
-	height:80px;
-	color:#fff;
-	background-color:rgba(255,255,255,0.3);
-	-webkit-animation:moving 0.5s;
-	   -moz-animation:moving 0.5s;
-	     -o-animation:moving 0.5s;
-	        animation:moving 0.5s;	 
-}
-@-webkit-keyframes moving{
-	from {height:40px;}
-	to {height:80px;}
-}
-@-moz-keyframes moving{
-	from {height:40px;}
-	to {height:80px;}
-}
-@-o-keyframes moving{
-	from {height:40px;}
-	to {height:80px;}
-}
-@keyframes moving{
-	from {height:40px;}
-	to {height:80px;}
-}
-section article .work .image .move h3{
-	font-weight:lighter;
-	height:40px;
-	line-height:40px;
-}
-
-/*blog_article*/
+/*blog_article*/ 
 pre{
 	margin:20px 0;
 	padding-top:20px;
