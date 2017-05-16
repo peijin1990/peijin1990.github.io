@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>博客小栈</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <div class="container common">
+                <h3>博客小栈</h3>
+                <nav>
+                    <a href="../index.html">首页</a>
+                    <a href="../article.html">随笔</a>
+                    <a href="../work.html">作品</a>
+                    <a href="../excerpt.html">转载</a>
+                    <a href="https://github.com/peijin1990/peijin1990.github.io">github.com/peijin1990</a>
+                </nav>
+            </div>
+        </header>
+        <div class="hr_10"></div>
+        <section class="common">
+            <aside>
+            <div class="list">
+                <h3>随笔分类</h3>
+                <ul>
+                    <li><a href="">css<span>(0)</span></a></li>
+                    <li><a href="">html<span>(0)</span></a></li>
+                    <li><a href="">javascript<span>(0)</span></a></li>
+                    <li><a href="">css3<span>(0)</span></a></li>
+                    <li><a href="">html5<span>(0)</span></a></li>
+                    <li><a href="">jquery<span>(0)</span></a></li>
+                    <li><a href="">php<span>(0)</span></a></li>
+                    <li><a href="">ajax<span>(0)</span></a></li>
+                </ul>
+            </div>
+                
+            </aside>
+            <article >
+               <div class="blog_article">
+               <h1>JavaScript和Jquery实现ajax</h1>
+               <h3 style="text-indent:2em;">1.javaScript实现ajax</h3>
+               <p>
+               	最流行的Ajax技术合并了所有主流浏览器都有的JavaScript对象XMLHttpRequest。
+               </p>
+               <p>(1).创建一个XMLHttpRequest对象</p>
+               <pre>
+               var request = new XMLHttpRequest();
+               </pre>
+               <p>(2).初始化XMLHttpRequest对象</p>
+               <pre>
+                request.open(requestType,url,async);
+
+                requsetType:请求类型，GET/POST
+                url:请求发送的目标地址
+                async:异步请求/同步请求，布尔值，true为异步，false为同步
+                异步为默认行为，第三个参数可以省略	
+               </pre>
+               <p>(3).使用send()方法发送请求，send方法必须接受一个参数，它是一个字符串，包含随请求一起发送的请求体。没有就是null。</p>
+               <p>GET发送少量数据，不包含任何信息，所以把null作为参数。</p>
+               <pre>
+               	var request = new XMLHttpRequest();
+               	request.open("GET","http://localhost/myTextFile.txt",false);
+               	request.send(null);
+               </pre>
+               <p>(4).每个XMLHttpRequest对象都有status属性，改属性包含了与服务器的响应一起发送的HTTP状态码。</p>
+               <pre>
+               	var request = new XMLHttpRequest();
+               	request.open("GET","http://localhost/myTextFile.txt",false);
+               	request.send(null);
+               	var status=request.status;
+               	if(status == 200){
+			alert("The text file was found!");
+               	}else if(status == 404){
+               		alert("The text file could not be found!");
+               	}else{
+               		alert("The server returned a status code of "+status);
+               	}
+               </pre>
+               <p>(5).在异步事件中，XMLHttpRequest对象提供了readyState属性，该属性包含一个数值，用来代表请求生存期中的特定状态。</p>
+               <pre>
+               	0--已创建对象，但未调用open()方法
+               	1--已调用open()方法，但未发送请求
+               	2--已发送请求
+               	3--接收来自服务器的响应
+               	4--接收完请求数据
+               </pre>
+               <p>当readyState属性发生变化时，就会调用readystatechange事件。</p>
+               <pre>
+               	var request = new XMLHttpRequest();
+               	function reqReadyStateChange(){
+					if(request.readyState == 4){
+						var status=request.status;
+						if(status == 200){
+							alert(request.reponseText);
+						}else{
+							alert("The server returned a status code of "+status);
+						}
+					}
+               	}
+               	request.open("GET","http://localhost/myTextFile.txt");
+               	request.onreadystatechange=reqReadyStateChange;
+               	request.send(null);
+               </pre>
+               <h3 style="text-indent:2em;">2.jQuery实际ajax</h3>
+               <p>(1).理解Jquery函数</p>
+               <p>jquery的get()方法用于发出GET请求。</p>
+               <pre>
+               	$.get("textFile.txt");
+               </pre>
+               <p>这行代码向服务器发出一个GET请求，要检索textFile.txt文本，但是还缺少回调函数，以便对服务器的响应执行操作。</p>
+               <pre>
+               	$.get("textFile.txt",handleResponse);
+               	function handleResponse(data){
+               		alert(data);
+               	}
+               </pre>
+               <pre>
+               	var parms={
+               		username="jack"
+               	};
+               	function handleResponse(obj){
+               		//obj已经是一个对象
+               	}
+               	var xhr=$.getJSON("phpformValidator.php",parms);
+               	xhr.done(handleResponse);
+               </pre>
+               </div>
+            </article>
+        </section>
+
+        <div class="clr"></div>
+        <div class="hr_10"></div>
+        <footer>
+        <div>
+        	<nav><a href="http://www.imooc.com">慕课网</a></nav>
+            <nav><a href="http://www.w3school.com.cn">w3c</a></nav>
+            <nav><a href="http://www.epubit.com.cn/">异步社区</a></nav>
+            <nav><a href="http://www.ituring.com.cn/">图灵社区</a></nav>
+            <nav><a href="http://www.zhangxinxu.com/wordpress/">张鑫旭</a></nav>
+            <nav><a href="http://www.ruanyifeng.com/blog/">阮一峰</a></nav>
+            <nav><a href="https://regexper.com/">Regexper</a></nav>
+        </div>
+         
+        </footer>
+    </div>
+</body>
+
+</html>
