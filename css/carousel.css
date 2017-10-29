@@ -163,10 +163,10 @@ body{
 @media (min-width:481px) and (max-width:767px){
   .carousel,
   .carousel .item{
-    height:370px;
+    height:350px;
   }
   .carousel-inner > .item > img{
-    height:370px;
+    height:350px;
   }
 }
 @media (max-width:480px){
