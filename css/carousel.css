@@ -144,4 +144,22 @@ body{
   .project-divider{
     margin:10px 0;
   }
+  .carousel,
+  .carousel .item{
+    height:250px;
+  }
+  .carousel-inner > .item > img{
+    height:250px;
+  }
+  .carousel-caption h1{
+    font-size:14px;
+  }
+  .carousel-caption p{
+    font-size:10px;
+  }
+  .carousel-caption p a{
+    font-size:10px;
+    padding:5px 8px;
+  }
+
 }
