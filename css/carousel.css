@@ -5,6 +5,7 @@ body{
   padding-bottom:40px;
   color:#5a5a5a;
 }
+
 /*=====================
  navbar
  ======================*/
@@ -48,6 +49,7 @@ body{
 #navbar .navbar-right a img{
   border-radius:50%;
 }
+
 /*=====================
  carousel
  ======================*/
@@ -70,6 +72,7 @@ body{
   min-width:100%;
   height:500px;
 }
+
 /*=====================
  skills
  ======================*/
@@ -95,6 +98,7 @@ body{
   width:148px;
   height:148px;
 }
+
 /*=====================
  project-divider
  ======================*/
@@ -110,24 +114,6 @@ body{
 /*=====================
  responsive css
  ======================*/
-@media(min-width:992px){
-  .carousel,
-  .carousel .item{
-    height:500px;
-  }
-  .carousel-inner > .item > img{
-    height:500px;
-  }
-  .project-heading{
-    margin-top:120px;
-  }
-  .carousel-caption h1{
-    margin:50px 0 30px 0;
-  }
-  .carousel-caption p{
-    margin-bottom:30px;
-  }
-}
 @media (min-width:768px){
   .carousel,
   .carousel .item{
@@ -160,6 +146,24 @@ body{
     font-size:50px;
   }
 }
+@media(min-width:992px){
+  .carousel,
+  .carousel .item{
+    height:500px;
+  }
+  .carousel-inner > .item > img{
+    height:500px;
+  }
+  .project-heading{
+    margin-top:120px;
+  }
+  .carousel-caption h1{
+    margin:50px 0 30px 0;
+  }
+  .carousel-caption p{
+    margin-bottom:30px;
+  }
+}
 @media (min-width:481px) and (max-width:767px){
   .carousel,
   .carousel .item{
@@ -190,5 +194,34 @@ body{
     font-size:10px;
     padding:5px 8px;
   }
+}
 
+/*=====================
+ btn按钮滑动特效
+ ======================*/
+.bg-btn{
+  position:relative;
+  transition:color 0.4s ease-out;
+  transform:translateZ(0);
+}
+.bg-btn:hover{
+  color:#fff;
+}
+.bg-btn:before{
+  content:"";
+  position:absolute;
+  top:-1px;
+  bottom:-1px;
+  left:-1px;
+  right:-1px;
+  z-index:-1;
+  border:1px solid #2e6da4;
+  background-color:#337ab7;
+  border-radius:6px;
+  transform:scaleX(0);
+  transform-origin:50%;
+  transition:transform 0.4s ease-out;
+}
+.bg-btn:hover:before{
+  transform:scaleX(1);
 }
