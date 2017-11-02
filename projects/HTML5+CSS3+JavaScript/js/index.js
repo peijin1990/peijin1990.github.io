@@ -72,8 +72,6 @@ var screenAnimateElements={
 
 //设置屏内元素初始状态 init
 var setScreenAnimateInit=function(screenCls){
-	console.log(screenCls);
-	console.log(1);
 	// var screen=getElem(screenCls);
 	var animateElements=screenAnimateElements[screenCls];
 	for(var i=0;i<animateElements.length;i++){
@@ -85,8 +83,6 @@ var setScreenAnimateInit=function(screenCls){
 
 //设置屏内元素动画状态 done
 var playScreenAnimateDone=function(screenCls){
-	console.log(screenCls);
-	console.log(2);
 	var animateElements=screenAnimateElements[screenCls];
 	for(var i=0;i<animateElements.length;i++){
 		var element=getElem(animateElements[i]);
@@ -95,10 +91,10 @@ var playScreenAnimateDone=function(screenCls){
 	}
 };
 
+
 window.onload=function(){
 	for(var k in screenAnimateElements){
 		if(k===".screen-1"){
-			console.log(4);
 			continue;
 		}
 		setScreenAnimateInit(k);
@@ -127,8 +123,7 @@ var switchNavItemsActive=function(idx){
 };
 
 window.onscroll=function(){
-	console.log(3);
-	var top=document.body.scrollTop || document.documentElement.scrollTop;
+	var top = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 	if(top>80){
 		addCls(getElem(".header"),"header_status_black");
 		addCls(getElem(".outline"),"outline_status_in");
@@ -137,7 +132,7 @@ window.onscroll=function(){
 		delCls(getElem(".outline"),"outline_status_in");
 	}
 	if(top>=0){
-		playScreenAnimateDone(".screen-1");
+		// playScreenAnimateDone(".screen-1");
 		switchNavItemsActive(0);
 		navTip.style.left=0*70+"px";
 	}
@@ -168,8 +163,8 @@ window.onscroll=function(){
 var setNavJump=function(i,lib){
 	var item=lib[i];
 	item.onclick=function(){
-		document.body.scrollTop=i*800;
-
+      document.documentElement.scrollTop=i*800;
+	  document.body.scrollTop=i*800;
 	};
 };
 
