@@ -197,7 +197,13 @@
           <h2 class="project-heading">
             HTML5与CSS3动画引入手机介绍-单页
           </h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <div class="lead">
+            <p>1.animate.css保存CSS3动画效果。实现动画的方式，是通过javascript改变元素的类名。</p>
+            <p>2.当页面滚动时，触发window.onScroll函数。判断函数距离顶部距离，给相应模块添加新的class。</p>
+            <p>3.firefox和ie浏览器在运行时，出现scroll-linked定位问题。解决方法是，top的获取改为从html根元素获取：<br>
+              <code>top=document.body.scrollTop || document.documentElement.scrollTop</code></p>
+          </div>
+          <p><a class="btn btn-default bg-btn" href="projects/HTML5+CSS3+JavaScript/HTML5+CSS3+JavaScript.html" role="button">在线查看</a></p>
         </div>
         <div class="col-md-5">
           <img src="img/login/0.png" class="project-image img-responsive center-block" alt="美化图片">

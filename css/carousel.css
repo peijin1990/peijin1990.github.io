@@ -123,11 +123,20 @@ body{
  ======================*/
 .project-divider{
   margin:30px 0;
+  border-bottom:1px solid #5AB590;
 }
+
+/*=====================
+ projects
+ ======================*/
 .project-heading{
   font-weight:300;
   line-height:1;
   letter-spacing:-1px;
+}
+.lead{
+  margin:30px 0 20px 0;
+  padding:5px;
 }
 
 /*=====================
@@ -162,8 +171,14 @@ body{
     line-height:1.4;
   }
   .project-heading{
-    font-size:50px;
+    font-size:32px;
   }
+  .lead{
+    border-radius:1em 4em 1em 4em / 2em 1em 2em 1em;
+    border-right:20px solid #5AB590;
+    border-bottom:10px solid #5AB590;
+  }
+
 }
 @media(min-width:992px){
   .carousel,
@@ -174,7 +189,11 @@ body{
     height:500px;
   }
   .project-heading{
-    margin-top:120px;
+    margin-top:50px;
+    margin-bottom:20px;
+  }
+  .lead p{
+    font-size:18px;
   }
   .carousel-caption h1{
     margin:50px 0 30px 0;
@@ -190,6 +209,11 @@ body{
   }
   .carousel-inner > .item > img{
     height:350px;
+  }
+  .lead{
+    border-radius:1em 4em 1em 4em / 2em 1em 2em 1em;
+    border-right:15px solid #5AB590;
+    border-bottom:7px solid #5AB590;
   }
 }
 @media (max-width:480px){
@@ -212,6 +236,11 @@ body{
   .carousel-caption p a{
     font-size:10px;
     padding:5px 8px;
+  }
+  .lead{
+    border-radius:1em 4em 1em 4em / 2em 1em 2em 1em;
+    border-right:10px solid #5AB590;
+    border-bottom:5px solid #5AB590;
   }
 }
 
