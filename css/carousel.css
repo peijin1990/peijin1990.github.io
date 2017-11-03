@@ -178,6 +178,10 @@ body{
     border-right:20px solid #5AB590;
     border-bottom:10px solid #5AB590;
   }
+  .lead-left{
+    border-right:none;
+    border-left:20px solid #5AB590;
+  }
 
 }
 @media(min-width:992px){
@@ -215,6 +219,10 @@ body{
     border-right:15px solid #5AB590;
     border-bottom:7px solid #5AB590;
   }
+  .lead-left{
+    border-right:none;
+    border-left:15px solid #5AB590;
+  }
 }
 @media (max-width:480px){
   .project-divider{
@@ -241,6 +249,10 @@ body{
     border-radius:1em 4em 1em 4em / 2em 1em 2em 1em;
     border-right:10px solid #5AB590;
     border-bottom:5px solid #5AB590;
+  }
+  .lead-left{
+    border-right:none;
+    border-left:10px solid #5AB590;
   }
 }
 
