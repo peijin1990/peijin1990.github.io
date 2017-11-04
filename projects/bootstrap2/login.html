@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>扇贝登录</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script type="text/javascript" src="bootstrap/js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<link rel="shortcut icon" href="bitbug_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script type="text/javascript">
+		function setColor(id,color){
+			$(id).css("color",color);
+		}
+		function removeColor(id,color){
+			$(id).css("color",color);
+		}
+		// if($("input[type='text']").change() && $("input[type='password']").change()){
+		// 	$("button").removeAttr("disabled");
+		// }else{
+		// 	$("button").attr("disabled","true");
+		// }
+	</script>
+</head>
+<body class="login-body">
+	<div class="container">
+		<div id="page-head" class="clearfix">
+			<div class="pull-left"><a href="index.html"><img src="images/landing_page_logo.png"></a></div>
+			<div id="page-head-right">
+				<div id="main-login" class="pull-right"> <a href="login.html" class="twi-btn-left" name="login"><span>登录</span></a><a href="register.html" class="twi-btn-right" name="register"><span>注册</span></a> </div>
+				<div id="main-menu">
+					<a href="index.html" class="btn-more">首页</a><a href="word.html" class="btn-more">单词</a><a href="news.html" class="btn-more">新闻</a><a href="read.html" class="btn-more">读书</a><a href="team.html" class="btn-more">小组</a><a href="check.html" class="btn-more">打卡日记</a>
+				</div>
+			</div>
+		</div>
+		<div class="login-container">
+			<div class="login-inner">
+				<div class="login-left pull-left">
+					<div id="carousel_box" class="carousel slide">
+						<ol class="carousel-indicators">
+							<li data-target="#carousel_box" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel_box" data-slide-to="1"></li>
+							<li data-target="#carousel_box" data-slide-to="2"></li>
+							<li data-target="#carousel_box" data-slide-to="3"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<a href="#"><img src="images/login/0.png"></a>
+								<div class="carousel-caption">
+									<h4>坚持打卡</h4>
+						            <p>享受学习的快乐</p>
+								</div>
+							</div>
+							<div class="item">
+								<a href="#"><img src="images/login/1.png"></a>
+								<div class="carousel-caption">
+									<h4>学习社区</h4>
+						            <p>加入小组，和小伙伴们一起坚持</p>
+								</div>
+							</div>
+							<div class="item">
+								<a href="#"><img src="images/login/2.png"></a>
+								<div class="carousel-caption">
+									<h4>考试保险</h4>
+						            <p>备考用扇贝，没过就赔钱</p>
+								</div>
+							</div>
+							<div class="item">
+								<a href="#"><img src="images/login/3.png"></a>
+								<div class="carousel-caption">
+									<h4>扇贝课程</h4>
+						            <p>更少的时间，更好的效果</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="login-right pull-right">
+					<div class="login-wrap">
+						<h3>欢迎来到扇贝</h3>
+						<form class="form-horizontal">
+								<div class="login-prepend">
+									<span class="fa fa-user-o fa-2x" id="fa-user"></span>
+									<input type="text" name="" placeholder="用户名 / 邮箱 / 手机号" onfocus="setColor('#fa-user','#209e85');" onblur="removeColor('#fa-user','#999');">
+								</div>
+								<div class="login-prepend">
+									<span class="fa fa-unlock-alt fa-2x" id="fa-unlock"></span>
+									<input type="password" name="" placeholder="密码" onfocus="setColor('#fa-unlock','#209e85');" onblur="removeColor('#fa-unlock','#999');">
+								</div>
+								<div class="login-tip clearfix">
+									<div class="pull-left">
+									<span>还没有账号？</span><a href="register.html">去注册</a>
+								</div>
+								<div class="pull-right">
+									<a href="#">忘记密码？</a>
+								</div>
+							</div>
+							<button class="btn btn-large disabled" type="submit" disabled="disabled">登录</button>
+						</form>
+						<div class="login-bottom-title">
+							OR
+						</div>
+						<div class="login-bottom-wrap pull-left ">
+							<a href="#"><i class="fa fa-weixin"></i></a>
+							<p>微信登录</p>
+						</div>
+						<div class="login-bottom-wrap pull-right">
+							<a href="#"><i class="fa fa-weibo"></i></a>
+							<p>微博登陆</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

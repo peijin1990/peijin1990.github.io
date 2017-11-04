@@ -174,7 +174,7 @@
           <!-- <p><a class="btn btn-default bg-btn" href="#" role="button">了解更多 &raquo;</a></p> -->
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-6">
+   <!--    <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="skills-wrapper">
           <img src="img/skills/6.jpg" alt="技能图6" class="img-size">
           <h2>java</h2>
@@ -183,7 +183,7 @@
           </div>
           <!-- <p><a class="btn btn-default bg-btn" href="#" role="button">了解更多 &raquo;</a></p> -->
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -218,13 +218,12 @@
             响应式文本页面-单页
           </h2>
           <div class="lead  lead-left">
-            <p>1.animate.css保存CSS3动画效果。实现动画的方式，是通过javascript改变元素的类名。</p>
-            <p>2.当页面滚动时，触发window.onScroll函数。判断函数距离顶部距离，给相应模块添加新的class。</p>
-            <p>3.firefox和ie浏览器在运行时，出现scroll-linked定位问题。解决方法是，top的获取改为从html根元素获取：<br>
-              <code>top=document.body.scrollTop || document.documentElement.scrollTop</code></p>
-            <p>注意：没有做响应式，仅适合在桌面浏览器下查看</p>
+            <p>1.采用响应式设计，PC，平板和手机客户端均表现良好</p>
+            <p>2.使用gulp对css，js以及图片压缩，自动生成版本号</p>
+            <p>3.采用@media媒体查询，不支持ie8以下的ie版本</p>
+            <p>4.modernizr.js检测HTML5兼容性，carousel制作响应式轮播图，picturefill.js处理响应式图片</p>
           </div>
-          <p><a class="btn btn-default bg-btn" href="projects/HTML5+CSS3+JavaScript/HTML5+CSS3+JavaScript.html" role="button">在线查看</a></p>
+          <p><a class="btn btn-default bg-btn" href="projects/ResponsiveWeb/dist/index.html" role="button">在线查看</a></p>
         </div>
         <div class="col-md-5 col-md-pull-7">
           <img src="img/login/1.png" class="project-image img-responsive center-block" alt="美化图片">
@@ -237,26 +236,21 @@
           <h2 class="project-heading">
             bootstrap2综合网站
           </h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <div class="lead  lead-left">
+            <p>1.此版本是基于成林的《
+            bootstrap实战》一书的拓展</p>
+            <p>2.添加了read.html，login.html和register.html，适当做了修改</p>
+            <p>3.bootstrap2对于栅格式布局没有bootstrap3提供的功能丰富，虽然提供的reponsive插件，但是效果不如bootstrap3</p>
+            <p>4.简历网站是基于bootstrap3的carousel模板</p>
+            <p></p>
+          </div>
+          <p><a class="btn btn-default bg-btn" href="projects/bootstrap2/index.html" role="button">在线查看</a></p>
         </div>
         <div class="col-md-5">
           <img src="img/login/2.png" class="project-image img-responsive center-block" alt="美化图片">
         </div>
       </div>
 
-      <hr class="project-divider">
-
-      <div class="row project">
-        <div class="col-md-7 col-md-push-5" id="javas">
-          <h2 class="project-heading">
-            JavaScript原生实现购物车
-          </h2>
-          <p class="lead  lead-left">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img src="img/login/3.png" class="project-image img-responsive center-block" alt="美化图片">
-        </div>
-      </div>
 
       <!-- footer -->
       <footer>
