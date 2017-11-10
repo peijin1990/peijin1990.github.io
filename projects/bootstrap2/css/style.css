@@ -105,6 +105,7 @@ a:focus{
   ========================*/
 #carousel_box{
 	height:770px;
+  overflow:hidden;
 }
 .carousel-indicators{
 	top:530px;

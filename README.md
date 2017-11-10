@@ -13,6 +13,11 @@
 - 对图片基本做了处理，优先使用在线的图片压缩网站[https://tinypng.com/](https://tinypng.com/)处理，如果还不满意再使用ps降低质量
 - css/js/image还需要gulp压缩，进一步提升第一次打开的速度
 
+### 更新
 
+- 2017/11/10
+  1.修复bootstrap2综合网站首页，carousel图片跳转边缘太长问题，在<code>#carousel_box</code>上添加```{overflow:hidden;}```
+  2.修复bootstrap2某些页面没有链接跳转
+  3.将bootstrap2中的本地地址转换为cdnjs地址
 
 
