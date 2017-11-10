@@ -23,4 +23,6 @@
   
   3.将bootstrap2中的本地地址转换为cdnjs地址
 
+  4.还原responsiveWeb.html文件夹，引用地址改为线上地址，压缩改为未压缩
+
 
