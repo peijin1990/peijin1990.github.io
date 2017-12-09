@@ -16,7 +16,30 @@ h6, .h6 {
   font-weight: normal;
   color: #333;
 }
-
+i{
+  font-style:normal;
+}
+h4{
+  position:relative;
+  background-color:#00a1d6;
+  width:80px;
+  height:40px;
+  line-height:40px;
+  color:#fff;
+  text-align:center;
+}
+h4:before{
+  content:"";
+  position:absolute;
+  left:80px;
+  top:0;
+  width:0px;
+  height:0px;
+  border-left:20px solid #00a1d6;
+  border-right:20px solid transparent;
+  border-top:20px solid transparent;
+  border-bottom:20px solid transparent;
+}
 /*
  * Override Bootstrap's default container.
  */
@@ -81,6 +104,7 @@ div.list{
   margin-bottom:30px;
 }
 div.list-block{
+  position:relative;
   font-size:14px;
   height:48px;
   line-height:48px;
@@ -96,14 +120,23 @@ div.list-block:hover{
   box-shadow:1px 2px 2px #ccc;
 }
 div.list-block a{
-  display:block;
+  display:inline-block;
   width:100%;
   text-decoration:none;
   font-family:"微软雅黑";
   color:#000;
+  position:relative;
+  z-index:10;
+  background-color:transparent;
 }
 div.list-block a:hover{
   color:#00a1d6;
+}
+div.list-block time{
+  position:absolute;
+  top:0;
+  right:20px;
+  z-index:-1;
 }
 
 /*===========================
@@ -132,6 +165,37 @@ div.list-block a:hover{
   padding:10px 20px;
   text-align:center;
   border-radius:30px;
+}
+
+/*===========================
+  blog posts
+  ===========================*/
+.blog-post{
+  margin-bottom:50px;
+  padding-bottom:10px;
+  font-size:16px;
+}
+.blog-post-title{
+  margin-bottom:10px;
+  font-size:30px;
+
+}
+.blog-post-meta {
+  margin-bottom:10px;
+  padding-bottom:10px;
+  color: #999;
+  font-size:14px;
+  border-bottom:1px dotted;
+}
+.blog-post-meta span{
+  padding:0px 10px;
+  color:#00a1d6;
+}
+blockquote{
+  font-size:16px;
+  background-color:#f8f8f8;
+  word-wrap:break-word;
+  word-break:break-all;
 }
 
 /*===========================

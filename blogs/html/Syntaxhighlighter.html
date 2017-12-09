@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="web前端，html，css，javascript，bootstrap，jquery">
+  <meta name="author" content="peijin">
+  <link rel="shortcut icon" href="../../favicon.ico">
+  <title>小树苗，我的前端小站——博客</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- IE10 viewport hack for Surface/desktop Windows 8  bug -->
+  <link rel="stylesheet" type="text/css" href="../../css/ie10-viewport-bug-workaround.css">
+   <!-- Html5 shim and respond.js for ie8 support of html5 elements and media queries -->
+  <!-- [if lt IE 9>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="../css/blog.css">
+  <link rel="stylesheet" type="text/css" href="../syntaxhighlighter/styles/shCoreDefault.css">
+  <script type="text/javascript" src="../syntaxhighlighter/scripts/shCore.js"></script>
+  <script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushXml.js"></script>
+  <script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+  <script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushCss.js"></script>
+
+</head>
+<body>
+  <!-- navbar -->
+  <div class="navbar-wrapper" id="navbar-wrapper">
+    <div class="container">
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="../index.html" class="navbar-brand"><img src="../../img/logo.png" alt="logo图片"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="../index.html">主页</a></li>
+              <li><a href="https://github.com/peijin1990/peijin1990.github.io">github</a></li>
+              <li><a href="https://github.com/peijin1990/articles">资源整理</a></li>
+              <li><a href="index.html">博客</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 文章主体 -->
+  <div class="container">
+    <div class="blog-header">
+      <h1 class="blog-title">前端知识总结</h1>
+      <p class="lead blog-description">以下内容是来自网络或者书籍</p>
+    </div>
+    <div class="row">
+      <div class="blog-main col-sm-8">
+        <div class="blog-post">
+          <h2 class="blog-post-title">Syntaxhighlighter代码高亮插件</h2>
+          <p class="blog-post-meta"><time datatime="2017-12-07">2017/12/09</time><span>by</span>peijin</p>
+
+          <p>当前版本为<span>3.0.83</span>，此篇文章仅仅对demo进行一些本地化修改，达到实现js/html/css的基本需求和美化。</p>
+          <hr>
+          <blockquote>
+            <p>下载地址：<a href="http://download.csdn.net/download/itmyhome/7757359">http://download.csdn.net/download/itmyhome/7757359</a></p>
+            <p>简单入门：<a href="http://blog.csdn.net/itmyhome1990/article/details/38517737">http://blog.csdn.net/itmyhome1990/article/details/38517737</a></p>
+            <p>详细入门：<a href="http://www.cnblogs.com/heyuquan/archive/2012/09/28/2707632.html">http://www.cnblogs.com/heyuquan/archive/2012/09/28/2707632.html</a></p>
+          </blockquote>
+          <hr>
+          <p>步骤：</p>
+          <p>1.从下载地址下载插件，解压</p>
+          <p>2.从解压后的文件夹scripts和styles选择需要的文件，代码如下</p>
+          </ol>
+
+          <pre class="brush: html;">
+            &lt;link rel="stylesheet" type="text/css" href="../syntaxhighlighter/styles/shCoreDefault.css"&gt;
+            &lt;script type="text/javascript" src="../syntaxhighlighter/scripts/shCore.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushXml.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushJScript.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../syntaxhighlighter/scripts/shBrushCss.js"&gt;&lt;/script&gt;
+            &lt;script type="text/javascript" src="../syntaxhighlighter/scripts/local.js"&gt;&lt;/script&gt;
+          </pre>
+
+          <p><span>pre标签是推荐的方式，详情请参考详细入门</span>，pre标签使用时注意将<code>></code>和<code><</code>转义为&g<i>t;</i>和&l<i>t;</i>。</p>
+
+          <hr>
+          <h3>安装过程中的问题</h3>
+          <hr>
+          <h4>问题1：</h4>
+          <p>当代码过长时，就会产生滚动条，如果不喜欢横向滚动条，可以按照以下方式修改</p>
+          <p>打开<code>shCoreDefault.css</code>文件</p>
+
+          <pre class="brush:css;pad-line-numbers:true;first-line:71;">
+             white-space: pre !important; //这句话注释
+             /*white-space: pre !important;*/
+          </pre>
+
+          <h4>问题2：</h4>
+          <p><code>shCoreDefault.css</code>，<code>shCore.js</code>，<code>shBrushXml.js</code>，<code>shBrushJScript.js</code>，<code>shBrushCss.js</code>都是需要加载的插件，<code>local.js</code>是本地化插件，主要内容是初始化Syntaxhighlighter，同时jquery部分是对取消横向滚动条后，行号太短，超出部分没有行号的问题。（代码来自<a href="http://www.mokuge.com/webdesign/1335.html">JQuery搞定SyntaxHighlighter v3.x长代码自动换行 行号错乱问题</a>）。</p>
+
+          <pre class="brush:js;">
+            SyntaxHighlighter.defaults['toolbar'] = false; //去掉右上角问号图标
+            SyntaxHighlighter.config.tagName = 'pre'; //可以更改解析的默认Tag。
+            SyntaxHighlighter.config.bloggerMode = true;
+            SyntaxHighlighter.config.stripBrs = true;
+            SyntaxHighlighter.all();
+
+            $(function() {
+            // Line wrap back
+            var shLineWrap = function() {
+            $('.syntaxhighlighter').each(function() {
+            // Fetch
+            var $sh = $(this),
+            $gutter = $sh.find('td.gutter'),
+            $code = $sh.find('td.code');
+            // Cycle through lines
+            $gutter.children('.line').each(function(i) {
+            // Fetch
+            var $gutterLine = $(this),
+            $codeLine = $code.find('.line:nth-child(' + (i + 1) + ')');
+            //alert($gutterLine);
+            // Fetch height
+            var height = $codeLine.height() || 0;
+            if (!height) {
+            height = 'auto';
+            } else {
+            height = height += 'px';
+            //alert(height);
+            }
+            // Copy height over
+            $gutterLine.attr('style', 'height: ' + height + ' !important'); // fix by Edi, for JQuery 1.7+ under Firefox 15.0
+            console.debug($gutterLine.height(), height, $gutterLine.text(), $codeLine);
+            });
+            });
+            };
+
+
+            // Line wrap back when syntax highlighter has done it's stuff
+            var shLineWrapWhenReady = function() {
+            if ($('.syntaxhighlighter').length === 0) {
+            setTimeout(shLineWrapWhenReady, 10);
+            } else {
+            shLineWrap();
+            }
+            };  // Fire
+            shLineWrapWhenReady();
+            });
+          </pre>
+
+          <h4>问题3：</h4>
+          <p>如果在CHROME和火狐浏览器下出现首行错位问题，解决办法如下： 根本原因是与主CSS样式的.container样式冲突，如下位置是bootstrap的定义(blog是基于bootstrap搭建)：</p>
+
+          <pre class="brush:css;">
+            .clearfix::before, ...,.container::before, .container::after, ..., .modal-footer::before, .modal-footer::after {
+              content: " ";
+              display: table;
+            }
+          </pre>
+
+          <p>在<code>shCoreDefault.css</code>中末尾添加如下代码</p>
+
+          <pre class="brush:css;">
+             .syntaxhighlighter td.code .container::before, .syntaxhighlighter td.code .container::after {
+                display: none;
+              }
+          </pre>
+
+          <h4>问题4：</h4>
+          <p>在chrome/firfox浏览器下存在右侧滚动条问题，打开<code>shCoreDefault.css</code>，找到</p>
+
+          <pre class="brush:css;">
+            .syntaxhighlighter table {
+              width: 100% !important;
+            }
+          </pre>
+
+          <p>修改为：</p>
+
+          <pre class="brush:css;">
+            .syntaxhighlighter table {
+              width: 100% !important;
+              margin: 1px 0 !important;
+            }
+          </pre>
+
+
+        </div>
+       <!--  <nav>
+          <ul class="pager">
+            <li><a href="#"></a></li>
+            <li><a href="#">下一页</a></li>
+          </ul>
+        </nav> -->
+      </div>
+      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+          <h4>关于</h4>
+          <p>前端的知识入门非常快，但是学起来很杂，很多东西看了后，长久不用就会生疏忘记，网络上和书籍中有很多的有用资料，是时候建立自己的知识体系了。</p>
+
+        </div>
+        <div class="sidebar-module">
+          <h4>存档</h4>
+          <ol class="list-unstyled">
+            <li><a href="#"><time datetime="2017-12">12月（3） 2017</time></a></li>
+          </ol>
+        </div>
+      </div><!--/.blog-sidebar-->
+    </div><!--/.row-->
+  </div><!--/.container-->
+
+  <footer class="blog-footer">
+    <p>博客使用<a href="http://getbootstrap.com">Bootstrap</a>构建 by <a href="https://github.com/peijin1990/peijin1990.github.io">peijin</a>.</p>
+    <p>
+      <a href="#navbar-wrapper">回到顶部</a>
+    </p>
+  </footer>
+
+  <!-- bootstrap core javascript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../js/ie10-viewport-bug-workaround.js"></script>
+  <script type="text/javascript" src="../syntaxhighlighter/scripts/local.js"></script>
+</body>
+</html>
