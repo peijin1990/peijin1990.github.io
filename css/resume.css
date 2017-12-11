@@ -1,0 +1,242 @@
+/*===========================
+  reset
+  ===========================*/
+*,h1,h3,p,section,div,article,aside{
+  margin:0px;
+  padding:0px;
+}
+body{
+  font-family:"微软雅黑";
+  color:#555;
+  background-color:#00C091;
+  padding-top:50px;
+}
+
+body>div.container{
+  background-color:#f8f8f8;
+  padding:0px;
+}
+h1{
+  color:#3B3B3B;
+  font-size:100px;
+  letter-spacing:-9px;
+  margin-left:-9px;
+}
+ol li{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+/*===========================
+  header
+  ===========================*/
+
+header.header{
+  position:relative;
+  height:200px;
+  color:#fff;
+  background-color:#292929;
+  padding:0px 20px;
+  margin-bottom:25px;
+}
+header.header h3{
+  font-size:40px;
+  padding-bottom:10px;
+}
+header.header p{
+  font-size:20px;
+}
+ol.tip{
+  position:absolute;
+  top:38px;
+  right:45px;
+}
+ol.tip li a i{
+  margin-bottom:15px;
+  color:#f8f8f8;
+
+}
+
+/*===========================
+  section
+  ===========================*/
+section.row{
+  padding:0 20px;
+}
+
+/*===========================
+  section-1
+  ===========================*/
+div.resume{
+  width:100%;
+  padding-top:25px;
+}
+div.resume h3.resume-title{
+  box-sizing:content-box;
+  font-weight:normal;
+  font-size:18px;
+  width:74px;
+  height:36px;
+  line-height:36px;
+  padding:0 15px;
+  color:#f8f8f8;
+  background-color:#292929;
+  margin-bottom:15px;
+}
+
+/*div.wrap*/
+div.wrap{
+  position:relative;
+}
+div.wrap p{
+  overflow:auto;
+  padding-left:15px;
+}
+div.wrap p span{
+  float:left;
+  margin-right:20px;
+  width:25%;
+}
+div.wrap p span:last-child{
+  float:right;
+  margin-right:0;
+  width:40%;
+}
+div.wrap ul.descrip,
+p.descrip{
+  color:#878686;
+  position:relative;
+  left:20px;
+  margin-top:12px;
+}
+div.wrap ul.descrip{
+  padding-left:20px;
+}
+div.wrap ul.descrip li,{
+  height:22px;
+  line-height:22px;
+}
+div.wrap span.line{
+  position:absolute;
+  left:0;
+  top:14px;
+  width:2px;
+  height:100%;
+  border-left:2px solid;
+  color:#555;
+}
+div.wrap span.line:before{
+  content:"";
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  position:absolute;
+  top:-11px;
+  left:-7px;
+  background-color:#555;
+}
+
+
+
+/*===========================
+  section-2
+  ===========================*/
+.section-2{
+  background-color:#F3F3F3;
+  color:#878686;
+
+}
+div.resume ol.message{
+  left:0;
+  top:60px;
+}
+div.resume ol.message .active{
+  position:relative;
+
+}
+div.resume ol.message .active i{
+  width:26px;
+  height:26px;
+  line-height:26px;
+  border:1px solid;
+  border-radius:50%;
+  text-align:center;
+  margin:0px 10px 3px 0;
+}
+aside div.resume p.descrip{
+  left:0;
+  text-align:justify;
+}
+aside div.resume ol li{
+  height:30px;
+  line-height:30px;
+}
+
+aside div.resume ol li span{
+  float:left;
+  width:50%;
+
+}
+
+/*===========================
+  footer
+  ===========================*/
+footer.footer{
+  width:100%;
+  height:50px;
+}
+
+
+/*===========================
+  媒体查询
+  ===========================*/
+@media screen and (max-width:768px){
+  div.container{
+    width:100%;
+  }
+  h1{
+    font-size:65px;
+  }
+  header.header p{
+    font-size:16px;
+  }
+}
+
+@media screen and (max-width:480px){
+  header.header{
+    text-align:center;
+  }
+   h1{
+    color:#3B3B3B;
+    font-size:64px;
+    letter-spacing:-9px;
+    margin-left:-9px;
+  }
+  header.header h3{
+    padding-top:10px;
+    font-size:30px;
+    padding-bottom:10px;
+  }
+  header.header p{
+    font-size:16px;
+  }
+  ol.tip{
+    width:108px;
+    left:50%;
+    height:45px;
+    margin-left:-54px;
+    top:155px;
+  }
+  ol.tip li{
+    float:left;
+    padding:0 5px;
+  }
+}
+
+@media screen and (min-width:320px) and (max-width:420px){
+  h1{
+    font-size:40px;
+    letter-spacing:-6px;
+  }
+}
