@@ -209,6 +209,9 @@ footer.footer{
 }
 
 @media screen and (max-width:480px){
+  body{
+    padding-top:0px;
+  }
   header.header{
     text-align:center;
   }
