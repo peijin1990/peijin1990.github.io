@@ -7,16 +7,16 @@
   <meta name="description" content="web前端，html，css，javascript，bootstrap，jquery">
   <meta name="author" content="peijin">
   <link rel="shortcut icon" href="favicon.ico">
-  <title>小树苗，我的前端小站</title>
+  <title>小树苗，我的前端小站——博客</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- IE10 viewport hack for Surface/desktop Windows 8  bug -->
   <link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css">
-  <!-- Html5 shim and respond.js for ie8 support of html5 elements and media queries -->
+   <!-- Html5 shim and respond.js for ie8 support of html5 elements and media queries -->
   <!-- [if lt IE 9>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
-  <link rel="stylesheet" type="text/css" href="css/carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/blog.css">
 </head>
 <body>
   <!-- navbar -->
@@ -57,210 +57,55 @@
     </div>
   </div>
 
-  <!-- carousel -->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img class="first-slide" src="img/topic/1.jpg" alt="first slide">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>HTML5+CSS3+JavaScript手机单页</h1>
-            <p>采用HTML5和CSS3技术，结合javaScript动态引入手机性能展示页，主要应用到了transition，animation，transform的诸多属性。</p>
-            <p><a class="btn btn-lg btn-default bg-btn" href="#phone" role="button">了解更多</a></p>
-          </div>
-        </div>
-      </div>
-       <div class="item">
-        <img class="second-slide" src="img/topic/2.jpg" alt="first slide">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>响应式web页单页</h1>
-            <p>采用@media媒体查询，结合jquery，modernizr.js，picturefill.min.js以及carousel.js插件处理图片，完成响应式web页面</p>
-            <p><a class="btn btn-lg btn-default bg-btn" href="#responsive" role="button">了解更多</a></p>
-          </div>
-        </div>
-      </div>
-       <div class="item">
-        <img class="third-slide" src="img/topic/3.png" alt="first slide">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>bootstrap2综合网站</h1>
-            <p>采用bootstrap2.3版本制作而成的多页面网站，桌面浏览器效果良好，不建议在ie9以下ie版本中查看（bootstrap2理论上可以兼容到ie7，但是这里添加了css3的一些属性）</p>
-            <p><a class="btn btn-lg btn-default bg-btn" href="#bootstrap" role="button">了解更多</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="#myCarousel" class="left carousel-control" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a href="#myCarousel" class="right carousel-control" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-  <!-- skills -->
-  <div class="container skills" id="skills">
-    <div class="skills-heading">
-      <h2>技能</h2>
+  <!-- 文章主体 -->
+  <div class="container">
+    <div class="blog-header">
+      <h1 class="blog-title">前端知识总结</h1>
+      <p class="lead blog-description">以下内容是来自网络或者书籍</p>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="skills-wrapper">
-          <img src="img/skills/1.jpg" alt="技能图1" class="img-size">
-          <h2>CSS</h2>
-          <div class="descrip text-left">
-            <p>熟练掌握运用CSS2.1常用样式</p>
-            <p>熟悉CSS3.0动画样式</p>
-            <p>熟练运用pscc2015，切图，修改图片尺寸，质量以及制作雪碧图</p>
-            <p>能够根据设计图，实现页面重构</p>
-          </div>
-          <!-- <p><a class="btn btn-default bg-btn" href="#" role="button">了解更多 &raquo;</a></p> -->
+      <div class="blog-main col-sm-8">
+        <h4>简历：</h4>
+        <div class="list">
+          <div class="list-block"><a href="resume.html">基于bootstrap3搭建的响应式在线简历</a><time datetime="2017-12-07">2017/12/12</time></div>
+        </div>
+        <h4>文章：</h4>
+        <div class="list">
+          <div class="list-block"><a href="html/css-2列自适应.html">CSS 2列自适应布局</a><time datetime="2017-12-07">2017/12/07</time></div>
+          <div class="list-block"><a href="html/2.html">CSS 3列自适应布局</a></div>
+          <div class="list-block"><a href="html/3.html">js动画效果</a></div>
+          <div class="list-block"><a href="html/Syntaxhighlighter.html">Syntaxhighlighter代码高亮插件</a><time datetime="2017-12-09">2017/12/09</time></div>
+        </div>
+        <h4>项目：</h4>
+        <div class="list">
+          <div class="list-block"><a href="projects/HTML5+CSS3+JavaScript/HTML5+CSS3+JavaScript.html">HTML5+CSS3+JavaScript手机单页</a><time datetime="2017-11-03">2017/11/03</time></div>
+          <div class="list-block"><a href="projects/ResponsiveWeb/responsiveWeb.html">响应式web页单页</a><time datetime="2017-11-10">2017/11/10</time></div>
+          <div class="list-block"><a href="projects/bootstrap2/index.html">bootstrap2综合网站</a><time datetime="2017-11-13">2017/11/13</time></div>
+          <div class="list-block"><a href="https://github.com/peijin1990/older-version-of-peijin1990.github.io">博客旧版基于bootstrap3搭建</a><time datetime="2017-12-12">2017/12/12</time></div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="skills-wrapper">
-          <img src="img/skills/2.jpg" alt="技能图2" class="img-size">
-          <h2>html</h2>
-          <div class="descrip text-left">
-            <p>熟练掌握HTML基本概念和常见标签</p>
-            <p>理解HTML5语义化</p>
-            <p>注意html标签的向下兼容</p>
-            <p>注重html标签嵌套的合理性，使结构更合理，CSS布局更高效</p>
-          </div>
-         <!--  <p><a class="btn btn-default bg-btn" href="#" role="button">了解更多 &raquo;</a></p> -->
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="skills-wrapper">
-          <img src="img/skills/3.jpg" alt="技能图3" class="img-size">
-          <h2>JavaScript</h2>
-          <div class="descrip text-left">
-            <p>熟练掌握并运用javascript DOM结构</p>
-            <p>熟悉BOM以及ECMAScript</p>
-            <p>了解javascript正则表达式</p>
-            <p>能够手写简单函数（轮播图，购物车等）</p>
-          </div>
-          <!-- <p><a class="btn btn-default bg-btn" href="#" role="button">了解更多 &raquo;</a></p> -->
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="skills-wrapper">
-          <img src="img/skills/4.jpg" alt="技能图4" class="img-size">
-          <h2>jQuery</h2>
-          <div class="descrip text-left">
-            <p>熟悉jQuery基本语法结构</p>
-            <p>能够配合js原生，或者js插件使用jQuery</p>
-          </div>
-          <!-- <p><a class="btn btn-default bg-btn" href="#" role="button">了解更多 &raquo;</a></p> -->
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="skills-wrapper">
-           <img src="img/skills/5.jpg" alt="技能图5" class="img-size">
-          <h2>Bootstrap</h2>
-          <div class="descrip text-left">
-            <p>熟悉bootstrap2以及bootsrap3</p>
-            <p>能够快速搭建简单的响应式页面</p>
-            <p>熟练使用css布局，组件和js插件</p>
-            <p>了解less结构化css过程</p>
-            <p>熟练运用fontawesome图标系统</p>
-            <p>熟练运用栅格系统（配合@media）</p>
-          </div>
-          <!-- <p><a class="btn btn-default bg-btn" href="#" role="button">了解更多 &raquo;</a></p> -->
-        </div>
-      </div>
-   <!--    <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="skills-wrapper">
-          <img src="img/skills/6.jpg" alt="技能图6" class="img-size">
-          <h2>java</h2>
-          <div class="descrip text-left">
-            <p>正在学习</p>
-          </div>
-          <!-- <p><a class="btn btn-default bg-btn" href="#" role="button">了解更多 &raquo;</a></p> -->
-        </div>
-      </div>
-    </div>
-  </div>
+      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+          <h4>关于</h4>
+          <p>前端的知识入门非常快，但是学起来很杂，很多东西看了后，长久不用就会生疏忘记，网络上和书籍中有很多的有用资料，是时候建立自己的知识体系了。</p>
 
-  <!-- projects -->
-  <div class="container">
-      <div class="skills-heading">
-        <h2>项目</h2>
-      </div>
-      <div class="row project" id="phone">
-        <div class="col-md-7">
-          <h2 class="project-heading">
-            HTML5与CSS3动画引入手机介绍-单页
-          </h2>
-          <div class="lead">
-            <p>1.animate.css保存CSS3动画效果。实现动画的方式，是通过javascript改变元素的类名。</p>
-            <p>2.当页面滚动时，触发window.onscroll函数。判断函数距离顶部距离，给相应模块添加新的class。</p>
-            <p>3.firefox和ie浏览器在运行时，出现scroll-linked定位问题。解决方法是，top的获取改为从html根元素获取：<br>
-              <code>top=document.body.scrollTop || document.documentElement.scrollTop</code></p>
-            <p>注意：没有做响应式，仅适合在桌面浏览器下查看</p>
-          </div>
-          <p><a class="btn btn-default bg-btn" href="projects/HTML5+CSS3+JavaScript/HTML5+CSS3+JavaScript.html" role="button">在线查看</a></p>
         </div>
-        <div class="col-md-5">
-          <img src="img/login/0.png" class="project-image img-responsive center-block" alt="美化图片">
+        <div class="sidebar-module">
+          <h4>存档</h4>
+          <ol class="list-unstyled">
+            <li><a href="#"><time datetime="2017-12">12月（3） 2017</time></a></li>
+          </ol>
         </div>
-      </div>
+      </div><!--/.blog-sidebar-->
+    </div><!--/.row-->
+  </div><!--/.container-->
 
-      <hr class="project-divider">
-      <div class="row project" id="responsive">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="project-heading">
-            响应式文本页面-单页
-          </h2>
-          <div class="lead  lead-left">
-            <p>1.采用响应式设计，PC，平板和手机客户端均表现良好</p>
-            <p>2.使用gulp对css，js以及图片压缩，自动生成版本号</p>
-            <p>3.采用@media媒体查询，不支持ie8以下的ie版本</p>
-            <p>4.modernizr.js检测HTML5兼容性，carousel制作响应式轮播图，picturefill.js处理响应式图片</p>
-          </div>
-          <p><a class="btn btn-default bg-btn" href="projects/ResponsiveWeb/responsiveWeb.html" role="button">在线查看</a></p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img src="img/login/1.png" class="project-image img-responsive center-block" alt="美化图片">
-        </div>
-      </div>
-
-      <hr class="project-divider">
-      <div class="row project" id="bootstrap">
-        <div class="col-md-7">
-          <h2 class="project-heading">
-            bootstrap2综合网站
-          </h2>
-          <div class="lead  lead-left">
-            <p>1.此版本是基于成林的《
-            bootstrap实战》一书的拓展</p>
-            <p>2.添加了read.html，login.html和register.html，适当做了修改</p>
-            <p>3.bootstrap2对于栅格式布局没有bootstrap3提供的功能丰富，虽然提供的reponsive插件，但是效果不如bootstrap3</p>
-            <p>4.简历网站是基于bootstrap3的carousel模板</p>
-            <p></p>
-          </div>
-          <p><a class="btn btn-default bg-btn" href="projects/bootstrap2/index.html" role="button">在线查看</a></p>
-        </div>
-        <div class="col-md-5">
-          <img src="img/login/2.png" class="project-image img-responsive center-block" alt="美化图片">
-        </div>
-      </div>
-
-
-      <!-- footer -->
-      <footer>
-        <p class="pull-right"><a href="#navbar-wrapper">回到顶部</a></p>
-        <p>2017 written by peijin</p>
-      </footer>
-  </div>
+  <footer class="blog-footer">
+    <p>博客使用<a href="http://getbootstrap.com">Bootstrap</a>构建 by <a href="https://github.com/peijin1990/peijin1990.github.io">peijin</a>.</p>
+    <p>
+      <a href="#navbar-wrapper">回到顶部</a>
+    </p>
+  </footer>
 
   <!-- bootstrap core javascript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

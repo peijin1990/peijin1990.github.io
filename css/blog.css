@@ -100,7 +100,7 @@ a.navbar-brand img{
 div.list{
   position:relative;
   height:auto;
-  min-height:300px;
+  /*min-height:100px;*/
   margin-bottom:30px;
 }
 div.list-block{
