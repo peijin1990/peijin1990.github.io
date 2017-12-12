@@ -25,4 +25,8 @@
 
   4.还原responsiveWeb.html文件夹，引用地址改为线上地址，压缩改为未压缩
 
+- 2017/12/12
 
+  1.改版主页，旧版本存储在仓库[https://github.com/peijin1990/older-version-of-peijin1990.github.io](https://github.com/peijin1990/older-version-of-peijin1990.github.io)中
+  2.新增加文章页面
+  3.制作了在线响应式简历
