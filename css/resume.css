@@ -95,13 +95,13 @@ div.wrap p{
 }
 div.wrap p span{
   float:left;
-  margin-right:20px;
-  width:25%;
+  margin-right:10px;
+  width:29%;
 }
 div.wrap p span:last-child{
   float:right;
   margin-right:0;
-  width:40%;
+  width:34%;
 }
 div.wrap ul.descrip,
 p.descrip{
@@ -109,13 +109,18 @@ p.descrip{
   position:relative;
   left:20px;
   margin-top:12px;
+  padding-right:15px;
+  text-align:justify;
+}
+p.descrip{
+  margin-bottom:12px;
 }
 div.wrap ul.descrip{
   padding-left:20px;
 }
-div.wrap ul.descrip li,{
-  height:22px;
-  line-height:22px;
+div.wrap ul.descrip li{
+  /*height:22px;
+  line-height:22px;*/
 }
 div.wrap span.line{
   position:absolute;
@@ -207,7 +212,7 @@ footer.footer{
   header.header{
     text-align:center;
   }
-   h1{
+  h1{
     color:#3B3B3B;
     font-size:64px;
     letter-spacing:-9px;
@@ -232,6 +237,8 @@ footer.footer{
     float:left;
     padding:0 5px;
   }
+  /*section*/
+
 }
 
 @media screen and (min-width:320px) and (max-width:420px){
