@@ -40,14 +40,11 @@ h4:before{
   border-top:20px solid transparent;
   border-bottom:20px solid transparent;
 }
-/*
- * Override Bootstrap's default container.
- */
-/*@media (min-width:1200px){
-  .container{
-    width:970px;
-  }
-}*/
+p{
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
 
 /*===========================
   navbar
