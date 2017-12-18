@@ -43,6 +43,7 @@ h4:before{
 p{
   word-wrap:break-word;
   word-break:break-all;
+  text-align:justify;
 }
 
 
