@@ -56,7 +56,7 @@
   <div class="container">
     <div class="blog-header">
       <h1 class="blog-title">前端知识总结</h1>
-      <p class="lead blog-description">以下内容是来自网络或者书籍</p>
+      <p class="lead blog-description">以下内容是来自网络/书籍/个人总结</p>
     </div>
     <div class="row">
       <div class="blog-main col-sm-8">
@@ -102,6 +102,7 @@
 
           <h4>问题2：</h4>
           <p><code>shCoreDefault.css</code>，<code>shCore.js</code>，<code>shBrushXml.js</code>，<code>shBrushJScript.js</code>，<code>shBrushCss.js</code>都是需要加载的插件，<code>local.js</code>是本地化插件，主要内容是初始化Syntaxhighlighter，同时jquery部分是对取消横向滚动条后，行号太短，超出部分没有行号的问题。（代码来自<a href="http://www.mokuge.com/webdesign/1335.html">JQuery搞定SyntaxHighlighter v3.x长代码自动换行 行号错乱问题</a>）。</p>
+          <p>此处使用的jquery插件，所以一定要在加载jquery以后再插入下段代码。</p>
 
           <pre class="brush:js;">
             SyntaxHighlighter.defaults['toolbar'] = false; //去掉右上角问号图标
@@ -188,14 +189,14 @@
             }
           </pre>
 
-
+          <h4>问题5：</h4>
+          <p>原版的Syntaxhighlighter插件是没有斑马纹路效果的，需要手动修改，颜色随自己喜好即可。这里的颜色是<code>#f4f4f4</code>。</p>
+          <pre class="brush:css;">
+            .syntaxhighlighter .line.alt2 {
+              background-color: #f4f4f4 !important;
+            }
+          </pre>
         </div>
-       <!--  <nav>
-          <ul class="pager">
-            <li><a href="#"></a></li>
-            <li><a href="#">下一页</a></li>
-          </ul>
-        </nav> -->
       </div>
       <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
         <div class="sidebar-module sidebar-module-inset">
