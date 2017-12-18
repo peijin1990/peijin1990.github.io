@@ -197,8 +197,11 @@ footer.footer{
   媒体查询
   ===========================*/
 @media screen and (max-width:768px){
-  div.container{
+  body>div.container{
     width:100%;
+  }
+  body>div.container section.row{
+    margin:0;
   }
   h1{
     font-size:65px;
